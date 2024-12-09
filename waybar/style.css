@@ -16,16 +16,15 @@
 
 #workspaces {
   border-radius: 0.5rem;
-  margin: 1px;
+  margin: 0.5px;
   background-color: #111111;
   margin-left: 1rem;
-  
 }
 
 #workspaces button {
   color: @lavender;
   border-radius: 1rem;
-  padding: 0.4rem;
+  padding: 0.1rem;
   margin-right: 0.5rem;
   margin-left: 0.5rem;
 }
@@ -47,6 +46,7 @@
 #battery,
 #pulseaudio,
 #custom-lock,
+#updates,
 #custom-power {
   /*background-color: @surface0;*/
   background: #111111;
@@ -82,8 +82,8 @@
 
 #pulseaudio {
   color: @maroon;
-  border-radius: 1rem 0px 0px 1rem;
-  margin-left: 1rem;
+  margin-right: 0.25rem;
+  margin-left: 0.25rem;
 }
 
 #custom-music {
@@ -103,13 +103,40 @@
 }
 
 #tray {
-  margin-right: 1rem;
-  border-radius: 1rem;
+   margin-right: 5px;
 }
 
-#cpu,
 #memory,
-#temperature {
-   margin-right: 0.4rem;
+#temperature,
+#custom-divider {
+   margin-right: 0rem;
+   background: #111111;
+   padding: 0.5rem 1rem;
+   margin: 5px 0;
+   border-radius: 0rem;
 }
 
+#network {
+   margin-right: 0rem;
+   background: #111111;
+   padding: 0.5rem 1rem;
+   margin: 5px 0;
+   border-radius: 0rem 1rem 1rem 0rem;
+}
+
+#custom-launcher {
+   margin-right: 0rem;
+   background: #111111;
+   padding: 0.5rem 1rem;
+   margin: 5px 2px;
+   border-radius: 1rem;
+}
+
+
+#cpu {
+   margin-right: 0rem;
+   background: #111111;
+   padding: 0.5rem 1rem;
+   margin: 5px 0;
+   border-radius: 1rem 0rem 0rem 1rem;
+}
