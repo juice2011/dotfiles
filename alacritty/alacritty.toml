@@ -1,0 +1,7 @@
+general.import = [
+   "~/.config/alacritty/catppuccin-mocha.toml"
+]
+
+[env]
+TERM = "alacritty"
+SHELL = "/usr/bin/bash"

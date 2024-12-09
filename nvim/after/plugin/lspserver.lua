@@ -6,12 +6,21 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  -- Replace the language servers listed here
-  -- with the ones you want to install
   ensure_installed = {'clangd', 'omnisharp', 'rust_analyzer'},
   handlers = {
     function(server_name)
-      require('lspconfig')[server_name].setup({})
+      -- Check if the server is clangd
+      if server_name == 'clangd' then
+        require('lspconfig').clangd.setup({
+          cmd = { "clangd", 
+                  "--clang-tidy"},
+          on_attach = lsp_zero.on_attach,
+        })
+      else
+        require('lspconfig')[server_name].setup({
+          on_attach = lsp_zero.on_attach,
+        })
+      end
     end,
   }
 })
